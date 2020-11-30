@@ -55,6 +55,7 @@ Ks = seq(from=50, to=500, by=10)
 
 pars = expand.grid(r=rs, K=Ks)
 
+# looping over all the parameters combinations ?apply
 out = apply(pars, 1, FUN=RSS, obs=obs, C=C)
 dim(out) = c(length(rs), length(Ks))
 
