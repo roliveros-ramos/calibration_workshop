@@ -1,3 +1,4 @@
+library(calibrar)
 
 # simulator of the logistic model
 runModel = function(par, T=100) {
