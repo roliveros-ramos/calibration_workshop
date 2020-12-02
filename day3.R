@@ -20,7 +20,7 @@ runModel = function(par, T=100) {
 
 errorFunction = function(par, obs, ...) {
   # run the model
-  sim = logisticH(par, ...)
+  sim = runModel(par, ...)
   nll_B = calibrar:::lnorm2(obs$biomass, sim$biomass)
   nll_C = calibrar:::lnorm2(obs$catch, sim$catch)
   nll = nll_B + nll_C
