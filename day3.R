@@ -1,6 +1,6 @@
 
 # simulator of the logistic model
-logisticH = function(par, T=100) {
+runModel = function(par, T=100) {
   # translating the 'par' vector to be our model
   r  = par[1]
   K  = par[2]
@@ -27,8 +27,11 @@ errorFunction = function(par, obs, ...) {
   return(nll)
 }
 
+real_par = c(r=0.2, K=1024, h=0.1, B0=301)
 
+obs = runModel(real_par)
 
+plot(obs$biomass)
 
 
 
